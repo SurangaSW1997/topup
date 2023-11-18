@@ -6,18 +6,12 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenwidth = MediaQuery.of(context).size.width;
-    double screenheight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Center(
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/ff.jpg"), fit: BoxFit.cover),
-              ),
-              width: screenwidth * .5,
-            ),
+            Container(),
             Container(
               child: Text("Top Up"),
             ),
