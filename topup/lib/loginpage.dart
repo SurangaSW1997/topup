@@ -10,7 +10,7 @@ class LogIn extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(16, 23, 37, 1),
+      backgroundColor: const Color.fromRGBO(16, 23, 37, 1),
       body: Row(
         children: [
           Expanded(
@@ -28,7 +28,7 @@ class LogIn extends StatelessWidget {
                     child: Container(
                       width: width * .9,
                       height: height * .1,
-                      child: Center(
+                      child: const Center(
                           child: Text(
                         "Welcome Back",
                         style: TextStyle(
@@ -41,7 +41,7 @@ class LogIn extends StatelessWidget {
                   Container(
                     width: width * .9,
                     height: height * .03,
-                    child: Text(
+                    child: const Text(
                       "Enter your credentials to continue",
                       style: TextStyle(
                           color: Colors.white,
@@ -66,7 +66,7 @@ class LogIn extends StatelessWidget {
                         Container(
                           alignment: Alignment.centerLeft,
                           width: width * .75,
-                          child: Opacity(
+                          child: const Opacity(
                             opacity: .5,
                             child: Text(
                               "email",
@@ -98,7 +98,7 @@ class LogIn extends StatelessWidget {
                         Container(
                           alignment: Alignment.centerLeft,
                           width: width * .75,
-                          child: Opacity(
+                          child: const Opacity(
                             opacity: .5,
                             child: Text(
                               "password",
@@ -118,7 +118,7 @@ class LogIn extends StatelessWidget {
                     width: width * .9,
                     child: Padding(
                       padding: EdgeInsets.only(right: width * .02),
-                      child: Text(
+                      child: const Text(
                         "Forget Password?",
                         style: TextStyle(
                             color: Color.fromRGBO(0, 87, 255, 1),
@@ -136,7 +136,7 @@ class LogIn extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
                     height: height * .06,
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Sign In",
                         style: TextStyle(
@@ -149,7 +149,7 @@ class LogIn extends StatelessWidget {
                   Container(
                     width: width * .9,
                     height: height * .06,
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       "Or",
                       style: TextStyle(
@@ -164,7 +164,7 @@ class LogIn extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
                     height: height * .06,
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Continue with Google",
                         style: TextStyle(
@@ -179,7 +179,7 @@ class LogIn extends StatelessWidget {
                     child: Container(
                       height: height * .05,
                       width: width * .9,
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Don't have an Account? Sign Up",
                           style: TextStyle(
