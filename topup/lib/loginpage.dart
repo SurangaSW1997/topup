@@ -1,7 +1,4 @@
-import 'dart:ffi';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LogIn extends StatelessWidget {
   const LogIn({super.key});
@@ -178,7 +175,7 @@ class LogIn extends StatelessWidget {
                     child: Center(
                       child: Row(
                         children: [
-                          Container(child: Icon(Icons.menu)),
+                          Container(child: Icon(Icons.golf_course)),
                           Container(
                             child: Text(
                               "Continue with Google",
