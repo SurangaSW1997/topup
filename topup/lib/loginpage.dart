@@ -38,6 +38,9 @@ class LogIn extends StatelessWidget {
                       )),
                     ),
                   ),
+                  SizedBox(
+                    height: height * .05,
+                  ),
                   Container(
                     width: width * .9,
                     height: height * .03,
@@ -50,18 +53,20 @@ class LogIn extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: height * .02,
+                    height: height * .03,
                   ),
                   Container(
                     decoration: BoxDecoration(
                         color: const Color.fromRGBO(71, 71, 71, 1),
                         borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
-                    height: height * .06,
+                    height: height * .07,
                     child: Row(
                       children: [
                         Container(
+                          alignment: Alignment.center,
                           width: width * .15,
+                          child: Icon(Icons.alternate_email_rounded),
                         ),
                         Container(
                           alignment: Alignment.centerLeft,
@@ -82,17 +87,19 @@ class LogIn extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: height * .02,
+                    height: height * .03,
                   ),
                   Container(
                     decoration: BoxDecoration(
                         color: const Color.fromRGBO(71, 71, 71, 1),
                         borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
-                    height: height * .06,
+                    height: height * .07,
                     child: Row(
                       children: [
                         Container(
+                          alignment: Alignment.center,
+                          child: Icon(Icons.lock_outline_rounded),
                           width: width * .15,
                         ),
                         Container(
@@ -113,6 +120,9 @@ class LogIn extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: height * .01,
+                  ),
                   Container(
                     alignment: Alignment.centerRight,
                     width: width * .9,
@@ -128,14 +138,14 @@ class LogIn extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: height * .02,
+                    height: height * .04,
                   ),
                   Container(
                     decoration: BoxDecoration(
                         color: const Color.fromRGBO(0, 87, 255, 1),
                         borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
-                    height: height * .06,
+                    height: height * .07,
                     child: const Center(
                       child: Text(
                         "Sign In",
@@ -148,7 +158,7 @@ class LogIn extends StatelessWidget {
                   ),
                   Container(
                     width: width * .9,
-                    height: height * .06,
+                    height: height * .1,
                     child: const Center(
                         child: Text(
                       "Or",
@@ -163,7 +173,7 @@ class LogIn extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
-                    height: height * .06,
+                    height: height * .07,
                     child: const Center(
                       child: Text(
                         "Continue with Google",
@@ -175,18 +185,32 @@ class LogIn extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: height * .38),
+                    padding: EdgeInsets.only(top: height * .2),
                     child: Container(
                       height: height * .05,
                       width: width * .9,
-                      child: const Center(
-                        child: Text(
-                          "Don't have an Account? Sign Up",
-                          style: TextStyle(
-                              fontFamily: 'Lucida Sans',
-                              fontSize: 16,
-                              color: Colors.white),
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            child: Text(
+                              "Don't have an Account?",
+                              style: TextStyle(
+                                  fontFamily: 'Lucida Sans',
+                                  fontSize: 16,
+                                  color: Colors.white),
+                            ),
+                          ),
+                          Container(
+                            child: Text(
+                              " Sign Up",
+                              style: TextStyle(
+                                  fontFamily: 'Lucida Sans',
+                                  fontSize: 16,
+                                  color: const Color.fromRGBO(0, 87, 255, 1)),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

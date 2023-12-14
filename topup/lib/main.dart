@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:topup/loginintropage.dart';
-import 'package:topup/loginpage.dart';
 
-import 'package:topup/splashscreen.dart';
+import 'package:topup/loginpage.dart';
 
 void main() {
   runApp(const MyApp());
