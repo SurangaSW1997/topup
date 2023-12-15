@@ -102,7 +102,7 @@ class LogIn extends StatelessWidget {
                         ),
                         Container(
                           alignment: Alignment.centerLeft,
-                          width: width * .75,
+                          width: width * .65,
                           child: const Opacity(
                             opacity: .5,
                             child: Text(
@@ -114,6 +114,11 @@ class LogIn extends StatelessWidget {
                               ),
                             ),
                           ),
+                        ),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: Icon(Icons.remove_red_eye_outlined),
+                          width: width * .1,
                         ),
                       ],
                     ),
@@ -172,21 +177,40 @@ class LogIn extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
                     height: height * .07,
-                    child: Center(
-                      child: Row(
-                        children: [
-                          Container(child: Icon(Icons.golf_course)),
-                          Container(
-                            child: Text(
-                              "Continue with Google",
-                              style: TextStyle(
-                                  fontFamily: 'Lora',
-                                  fontSize: 16,
-                                  color: Colors.black),
-                            ),
-                          ),
-                        ],
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/google.png",
+                          width: 30,
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Text(
+                          "Continue with Google",
+                          style: TextStyle(
+                              fontFamily: 'Lora',
+                              fontSize: 16,
+                              color: Colors.black),
+                        ),
+                        // Container(
+                        //   alignment: Alignment.centerRight,
+                        //   height: 30,
+                        //   width: width * .3,
+                        //   child: Image.asset("assets/google.png"),
+                        // ),
+                        // Container(
+                        //   width: width * .6,
+                        //   child: Text(
+                        //     "Continue with Google",
+                        //     style: TextStyle(
+                        //         fontFamily: 'Lora',
+                        //         fontSize: 16,
+                        //         color: Colors.black),
+                        //   ),
+                        // ),
+                      ],
                     ),
                   ),
                   Padding(

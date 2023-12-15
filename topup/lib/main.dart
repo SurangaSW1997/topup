@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'package:topup/loginpage.dart';
+import 'package:topup/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());

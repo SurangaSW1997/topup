@@ -63,44 +63,49 @@ class LoginIntro extends StatelessWidget {
               )
             ],
           ),
-          Container(
-            child: Column(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(0, 87, 255, 1),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  width: width * .9,
-                  height: height * .07,
-                  child: Center(
-                      child: Text(
-                    "Log In",
-                    style: TextStyle(
-                        color: Colors.white, fontFamily: 'Lora', fontSize: 16),
-                  )),
-                ),
-                SizedBox(
-                  height: height * .01,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  width: width * .9,
-                  height: height * .07,
-                  child: Center(
-                    child: Text(
-                      "Sign Up",
+          Padding(
+            padding: EdgeInsets.only(top: height * .02),
+            child: Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(0, 87, 255, 1),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    width: width * .9,
+                    height: height * .06,
+                    child: Center(
+                        child: Text(
+                      "LOG IN",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontFamily: 'Lora',
-                          fontSize: 16),
+                          fontSize: 14),
+                    )),
+                  ),
+                  SizedBox(
+                    height: height * .01,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    width: width * .9,
+                    height: height * .06,
+                    child: Center(
+                      child: Text(
+                        "SIGN UP",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Lora',
+                            fontSize: 14),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
