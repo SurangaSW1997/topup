@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:topup/loginpage.dart';
+import 'package:topup/signuppage.dart';
 
 class LoginIntro extends StatelessWidget {
   const LoginIntro({super.key});
@@ -8,7 +10,7 @@ class LoginIntro extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(16, 23, 37, 1),
+      backgroundColor: const Color.fromRGBO(16, 23, 37, 1),
       body: Column(
         children: [
           Stack(
@@ -46,7 +48,7 @@ class LoginIntro extends StatelessWidget {
                       width: width,
                       child: Padding(
                         padding: EdgeInsets.only(left: width * .07),
-                        child: Text(
+                        child: const Text(
                           "Let's get started from here",
                           style: TextStyle(
                               color: Colors.white,
@@ -68,39 +70,53 @@ class LoginIntro extends StatelessWidget {
             child: Container(
               child: Column(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromRGBO(0, 87, 255, 1),
-                      borderRadius: BorderRadius.circular(20),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => LogIn()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color.fromRGBO(0, 87, 255, 1),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      width: width * .9,
+                      height: height * .06,
+                      child: const Center(
+                          child: Text(
+                        "LOG IN",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Lora',
+                            fontSize: 14),
+                      )),
                     ),
-                    width: width * .9,
-                    height: height * .06,
-                    child: Center(
-                        child: Text(
-                      "LOG IN",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Lora',
-                          fontSize: 14),
-                    )),
                   ),
                   SizedBox(
                     height: height * .01,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    width: width * .9,
-                    height: height * .06,
-                    child: Center(
-                      child: Text(
-                        "SIGN UP",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'Lora',
-                            fontSize: 14),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUp()),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      width: width * .9,
+                      height: height * .06,
+                      child: const Center(
+                        child: Text(
+                          "SIGN UP",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'Lora',
+                              fontSize: 14),
+                        ),
                       ),
                     ),
                   ),

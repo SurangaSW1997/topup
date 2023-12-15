@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:topup/signuppage.dart';
+import 'package:topup/loginpage.dart';
 
-class LogIn extends StatelessWidget {
-  const LogIn({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class LogIn extends StatelessWidget {
                     width: width * .9,
                     height: height * .03,
                     child: const Text(
-                      "Enter your credentials to continue",
+                      "Sign Up for get started",
                       style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'Lucida Sans',
@@ -52,7 +52,7 @@ class LogIn extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: height * .03,
+                    height: height * .02,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -65,7 +65,41 @@ class LogIn extends StatelessWidget {
                         Container(
                           alignment: Alignment.center,
                           width: width * .15,
-                          child: const Icon(Icons.alternate_email_rounded),
+                          child: Icon(Icons.person_outline_outlined),
+                        ),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          width: width * .75,
+                          child: const Opacity(
+                            opacity: .5,
+                            child: Text(
+                              "name",
+                              style: TextStyle(
+                                fontFamily: 'Lucida Sans',
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: height * .02,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(71, 71, 71, 1),
+                        borderRadius: BorderRadius.circular(20)),
+                    width: width * .9,
+                    height: height * .06,
+                    child: Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          width: width * .15,
+                          child: Icon(Icons.alternate_email_rounded),
                         ),
                         Container(
                           alignment: Alignment.centerLeft,
@@ -86,7 +120,7 @@ class LogIn extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: height * .03,
+                    height: height * .02,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -98,7 +132,41 @@ class LogIn extends StatelessWidget {
                       children: [
                         Container(
                           alignment: Alignment.center,
-                          child: const Icon(Icons.lock_outline_rounded),
+                          width: width * .15,
+                          child: Icon(Icons.call_outlined),
+                        ),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          width: width * .75,
+                          child: const Opacity(
+                            opacity: .5,
+                            child: Text(
+                              "phone",
+                              style: TextStyle(
+                                fontFamily: 'Lucida Sans',
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: height * .02,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(71, 71, 71, 1),
+                        borderRadius: BorderRadius.circular(20)),
+                    width: width * .9,
+                    height: height * .06,
+                    child: Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: Icon(Icons.lock_outline_rounded),
                           width: width * .15,
                         ),
                         Container(
@@ -118,31 +186,53 @@ class LogIn extends StatelessWidget {
                         ),
                         Container(
                           alignment: Alignment.centerLeft,
-                          child: const Icon(Icons.remove_red_eye_outlined),
+                          child: Icon(Icons.remove_red_eye_outlined),
                           width: width * .1,
                         ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: height * .01,
+                    height: height * .02,
                   ),
                   Container(
-                    alignment: Alignment.centerRight,
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(71, 71, 71, 1),
+                        borderRadius: BorderRadius.circular(20)),
                     width: width * .9,
-                    child: Padding(
-                      padding: EdgeInsets.only(right: width * .02),
-                      child: const Text(
-                        "Forget Password?",
-                        style: TextStyle(
-                            color: Color.fromRGBO(0, 87, 255, 1),
-                            fontFamily: 'Lucida Sans',
-                            fontSize: 16),
-                      ),
+                    height: height * .06,
+                    child: Row(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: Icon(Icons.lock_outline_rounded),
+                          width: width * .15,
+                        ),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          width: width * .65,
+                          child: const Opacity(
+                            opacity: .5,
+                            child: Text(
+                              "confirm password",
+                              style: TextStyle(
+                                fontFamily: 'Lucida Sans',
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: Icon(Icons.remove_red_eye_outlined),
+                          width: width * .1,
+                        ),
+                      ],
                     ),
                   ),
                   SizedBox(
-                    height: height * .04,
+                    height: height * .03,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -152,7 +242,7 @@ class LogIn extends StatelessWidget {
                     height: height * .06,
                     child: const Center(
                       child: Text(
-                        "Sign In",
+                        "Sign Up",
                         style: TextStyle(
                             fontSize: 16,
                             fontFamily: 'Lora',
@@ -160,46 +250,8 @@ class LogIn extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    width: width * .9,
-                    height: height * .1,
-                    child: const Center(
-                        child: Text(
-                      "Or",
-                      style: TextStyle(
-                          fontFamily: 'Lora',
-                          fontSize: 16,
-                          color: Colors.white),
-                    )),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)),
-                    width: width * .9,
-                    height: height * .06,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          "assets/google.png",
-                          width: 30,
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        const Text(
-                          "Continue with Google",
-                          style: TextStyle(
-                              fontFamily: 'Lora',
-                              fontSize: 16,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
-                  ),
                   Padding(
-                    padding: EdgeInsets.only(top: height * .24),
+                    padding: EdgeInsets.only(top: height * .22),
                     child: Container(
                       height: height * .05,
                       width: width * .9,
@@ -207,8 +259,8 @@ class LogIn extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            child: const Text(
-                              "Don't have an Account?",
+                            child: Text(
+                              "Already have an Account?",
                               style: TextStyle(
                                   fontFamily: 'Lucida Sans',
                                   fontSize: 16,
@@ -220,16 +272,16 @@ class LogIn extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const SignUp()),
+                                    builder: (context) => LogIn()),
                               );
                             },
                             child: Container(
-                              child: const Text(
-                                " Sign Up",
+                              child: Text(
+                                " Log In",
                                 style: TextStyle(
                                     fontFamily: 'Lucida Sans',
                                     fontSize: 16,
-                                    color: Color.fromRGBO(0, 87, 255, 1)),
+                                    color: const Color.fromRGBO(0, 87, 255, 1)),
                               ),
                             ),
                           ),
