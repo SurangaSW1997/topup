@@ -29,7 +29,7 @@ class SignUp extends StatelessWidget {
                       height: height * .1,
                       child: const Center(
                           child: Text(
-                        "Welcome Back",
+                        "Create Account",
                         style: TextStyle(
                             fontFamily: 'Lucida Sans',
                             fontSize: 40,
