@@ -13,10 +13,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Simulate a delay for the splash screen (e.g., 2 seconds)
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       // Navigate to the main screen after the splash screen duration
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => LoginIntro()),
+        MaterialPageRoute(builder: (context) => const LoginIntro()),
       );
     });
   }
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.lightBlue,
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: width * .5,
           child: Image.asset(
             "assets/topup.png",

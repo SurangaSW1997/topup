@@ -15,7 +15,7 @@ class LoginIntro extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Container(
+              SizedBox(
                 width: width,
                 height: height * .8,
                 child: Opacity(
@@ -44,7 +44,7 @@ class LoginIntro extends StatelessWidget {
                     SizedBox(
                       height: height * .02,
                     ),
-                    Container(
+                    SizedBox(
                       width: width,
                       child: Padding(
                         padding: EdgeInsets.only(left: width * .07),
@@ -67,61 +67,59 @@ class LoginIntro extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(top: height * .02),
-            child: Container(
-              child: Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => LogIn()));
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color.fromRGBO(0, 87, 255, 1),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      width: width * .9,
-                      height: height * .06,
-                      child: const Center(
-                          child: Text(
-                        "LOG IN",
+            child: Column(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => const LogIn()));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(0, 87, 255, 1),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    width: width * .9,
+                    height: height * .06,
+                    child: const Center(
+                        child: Text(
+                      "LOG IN",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Lora',
+                          fontSize: 14),
+                    )),
+                  ),
+                ),
+                SizedBox(
+                  height: height * .01,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SignUp()),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    width: width * .9,
+                    height: height * .06,
+                    child: const Center(
+                      child: Text(
+                        "SIGN UP",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontFamily: 'Lora',
                             fontSize: 14),
-                      )),
-                    ),
-                  ),
-                  SizedBox(
-                    height: height * .01,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUp()),
-                      );
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      width: width * .9,
-                      height: height * .06,
-                      child: const Center(
-                        child: Text(
-                          "SIGN UP",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Lora',
-                              fontSize: 14),
-                        ),
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],

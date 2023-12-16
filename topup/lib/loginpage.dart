@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:topup/homepage.dart';
 import 'package:topup/signuppage.dart';
 
 class LogIn extends StatefulWidget {
@@ -27,13 +28,13 @@ class _LogInState extends State<LogIn> {
             ),
             Expanded(
               flex: 18,
-              child: Container(
+              child: SizedBox(
                 width: width * .9,
                 child: Column(
                   children: [
                     Padding(
                       padding: EdgeInsets.only(top: height * .05),
-                      child: Container(
+                      child: SizedBox(
                         width: width * .9,
                         height: height * .1,
                         child: const Center(
@@ -49,7 +50,7 @@ class _LogInState extends State<LogIn> {
                     SizedBox(
                       height: height * .05,
                     ),
-                    Container(
+                    SizedBox(
                       width: width * .9,
                       height: height * .03,
                       child: const Text(
@@ -178,23 +179,32 @@ class _LogInState extends State<LogIn> {
                     SizedBox(
                       height: height * .04,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(0, 87, 255, 1),
-                          borderRadius: BorderRadius.circular(20)),
-                      width: width * .9,
-                      height: height * .06,
-                      child: const Center(
-                        child: Text(
-                          "Sign In",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontFamily: 'Lora',
-                              color: Colors.white),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                // ignore: prefer_const_constructors
+                                builder: (context) => HomePage()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: const Color.fromRGBO(0, 87, 255, 1),
+                            borderRadius: BorderRadius.circular(20)),
+                        width: width * .9,
+                        height: height * .06,
+                        child: const Center(
+                          child: Text(
+                            "Log In",
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Lora',
+                                color: Colors.white),
+                          ),
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: width * .9,
                       height: height * .1,
                       child: const Center(
@@ -234,20 +244,18 @@ class _LogInState extends State<LogIn> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: height * .24),
-                      child: Container(
+                      child: SizedBox(
                         height: height * .05,
                         width: width * .9,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              child: const Text(
-                                "Don't have an Account?",
-                                style: TextStyle(
-                                    fontFamily: 'Lucida Sans',
-                                    fontSize: 16,
-                                    color: Colors.white),
-                              ),
+                            const Text(
+                              "Don't have an Account?",
+                              style: TextStyle(
+                                  fontFamily: 'Lucida Sans',
+                                  fontSize: 16,
+                                  color: Colors.white),
                             ),
                             GestureDetector(
                               onTap: () {
@@ -257,14 +265,12 @@ class _LogInState extends State<LogIn> {
                                       builder: (context) => const SignUp()),
                                 );
                               },
-                              child: Container(
-                                child: const Text(
-                                  " Sign Up",
-                                  style: TextStyle(
-                                      fontFamily: 'Lucida Sans',
-                                      fontSize: 16,
-                                      color: Color.fromRGBO(0, 87, 255, 1)),
-                                ),
+                              child: const Text(
+                                " Sign Up",
+                                style: TextStyle(
+                                    fontFamily: 'Lucida Sans',
+                                    fontSize: 16,
+                                    color: Color.fromRGBO(0, 87, 255, 1)),
                               ),
                             ),
                           ],
