@@ -5,37 +5,20 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: Stack(
-        children: [
-          Row(
-            children: [
-              Container(
-                width: width * .2,
-                child: Icon(Icons.home),
-              ),
-              Container(
-                width: width * .2,
-                child: Icon(Icons.gamepad),
-              ),
-              Container(
-                width: width * .2,
-                child: Icon(Icons.store),
-              ),
-              Container(
-                width: width * .2,
-                child: Icon(Icons.info),
-              ),
-              Container(
-                width: width * .2,
-                child: Icon(Icons.man),
-              )
-            ],
-          ),
-        ],
-      ),
+      backgroundColor: const Color.fromRGBO(3, 15, 39, 1),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+          backgroundColor: Colors.black,
+        ),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.games),
+            label: 'games',
+            backgroundColor: Colors.amber),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+      ]),
     );
   }
 }

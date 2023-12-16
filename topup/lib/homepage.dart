@@ -42,7 +42,6 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          BottomNavBar(),
         ],
       ),
     );
