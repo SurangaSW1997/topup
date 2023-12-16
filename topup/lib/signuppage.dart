@@ -26,13 +26,13 @@ class _SignUpState extends State<SignUp> {
             ),
             Expanded(
               flex: 18,
-              child: Container(
+              child: SizedBox(
                 width: width * .9,
                 child: Column(
                   children: [
                     Padding(
                       padding: EdgeInsets.only(top: height * .05),
-                      child: Container(
+                      child: SizedBox(
                         width: width * .9,
                         height: height * .1,
                         child: const Center(
@@ -48,7 +48,7 @@ class _SignUpState extends State<SignUp> {
                     SizedBox(
                       height: height * .05,
                     ),
-                    Container(
+                    SizedBox(
                       width: width * .9,
                       height: height * .03,
                       child: const Text(
@@ -192,8 +192,8 @@ class _SignUpState extends State<SignUp> {
                         children: [
                           Container(
                             alignment: Alignment.center,
-                            child: const Icon(Icons.lock_outline_rounded),
                             width: width * .15,
+                            child: const Icon(Icons.lock_outline_rounded),
                           ),
                           Container(
                             alignment: Alignment.centerLeft,
@@ -206,10 +206,10 @@ class _SignUpState extends State<SignUp> {
                                   obscureText: _obsecureText,
                                   controller: _passwordController,
                                   keyboardType: TextInputType.visiblePassword,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "password"),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontFamily: 'Lucida Sans',
                                     fontSize: 16,
                                     color: Colors.white,
@@ -220,6 +220,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           Container(
                             alignment: Alignment.centerLeft,
+                            width: width * .1,
                             child: InkWell(
                                 onTap: () {
                                   setState(() {
@@ -228,7 +229,6 @@ class _SignUpState extends State<SignUp> {
                                 },
                                 child:
                                     const Icon(Icons.remove_red_eye_outlined)),
-                            width: width * .1,
                           ),
                         ],
                       ),
@@ -246,8 +246,8 @@ class _SignUpState extends State<SignUp> {
                         children: [
                           Container(
                             alignment: Alignment.center,
-                            child: const Icon(Icons.lock_outline_rounded),
                             width: width * .15,
+                            child: const Icon(Icons.lock_outline_rounded),
                           ),
                           Container(
                             alignment: Alignment.centerLeft,
@@ -260,10 +260,10 @@ class _SignUpState extends State<SignUp> {
                                   obscureText: _obsecureText,
                                   controller: _passwordController,
                                   keyboardType: TextInputType.visiblePassword,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "confirm password"),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontFamily: 'Lucida Sans',
                                     fontSize: 16,
                                     color: Colors.white,
@@ -274,14 +274,15 @@ class _SignUpState extends State<SignUp> {
                           ),
                           Container(
                             alignment: Alignment.centerLeft,
+                            width: width * .1,
                             child: InkWell(
                                 onTap: () {
                                   setState(() {
                                     _obsecureText = !_obsecureText;
                                   });
                                 },
-                                child: Icon(Icons.remove_red_eye_outlined)),
-                            width: width * .1,
+                                child:
+                                    const Icon(Icons.remove_red_eye_outlined)),
                           ),
                         ],
                       ),
@@ -307,20 +308,18 @@ class _SignUpState extends State<SignUp> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: height * .22),
-                      child: Container(
+                      child: SizedBox(
                         height: height * .05,
                         width: width * .9,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              child: const Text(
-                                "Already have an Account?",
-                                style: TextStyle(
-                                    fontFamily: 'Lucida Sans',
-                                    fontSize: 16,
-                                    color: Colors.white),
-                              ),
+                            const Text(
+                              "Already have an Account?",
+                              style: TextStyle(
+                                  fontFamily: 'Lucida Sans',
+                                  fontSize: 16,
+                                  color: Colors.white),
                             ),
                             GestureDetector(
                               onTap: () {
@@ -330,14 +329,12 @@ class _SignUpState extends State<SignUp> {
                                       builder: (context) => const LogIn()),
                                 );
                               },
-                              child: Container(
-                                child: const Text(
-                                  " Log In",
-                                  style: TextStyle(
-                                      fontFamily: 'Lucida Sans',
-                                      fontSize: 16,
-                                      color: Color.fromRGBO(0, 87, 255, 1)),
-                                ),
+                              child: const Text(
+                                " Log In",
+                                style: TextStyle(
+                                    fontFamily: 'Lucida Sans',
+                                    fontSize: 16,
+                                    color: Color.fromRGBO(0, 87, 255, 1)),
                               ),
                             ),
                           ],
