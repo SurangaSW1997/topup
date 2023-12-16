@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:topup/signuppage.dart';
 
-class LogIn extends StatelessWidget {
+class LogIn extends StatefulWidget {
   const LogIn({super.key});
 
+  @override
+  State<LogIn> createState() => _LogInState();
+}
+
+class _LogInState extends State<LogIn> {
+  final TextEditingController _passwordController = TextEditingController();
+  bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -11,14 +18,14 @@ class LogIn extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color.fromRGBO(16, 23, 37, 1),
-      body: Row(
-        children: [
-          Expanded(
-            flex: 1,
-            child: Container(),
-          ),
-          SingleChildScrollView(
-            child: Expanded(
+      body: SingleChildScrollView(
+        child: Row(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(),
+            ),
+            Expanded(
               flex: 18,
               child: Container(
                 width: width * .9,
@@ -75,8 +82,9 @@ class LogIn extends StatelessWidget {
                             child: Opacity(
                               opacity: .5,
                               child: Padding(
-                                padding: EdgeInsets.only(right: width * .1),
+                                padding: EdgeInsets.only(right: width * .13),
                                 child: const TextField(
+                                  keyboardType: TextInputType.emailAddress,
                                   textAlignVertical: TextAlignVertical.center,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -109,28 +117,43 @@ class LogIn extends StatelessWidget {
                         children: [
                           Container(
                             alignment: Alignment.center,
-                            child: const Icon(Icons.lock_outline_rounded),
                             width: width * .15,
+                            child: const Icon(Icons.lock_outline_rounded),
                           ),
                           Container(
                             alignment: Alignment.centerLeft,
                             width: width * .65,
-                            child: const Opacity(
+                            child: Opacity(
                               opacity: .5,
-                              child: Text(
-                                "password",
-                                style: TextStyle(
-                                  fontFamily: 'Lucida Sans',
-                                  fontSize: 16,
-                                  color: Colors.white,
+                              child: Padding(
+                                padding: EdgeInsets.only(right: width * .03),
+                                child: TextField(
+                                  obscureText: _obscureText,
+                                  controller: _passwordController,
+                                  keyboardType: TextInputType.visiblePassword,
+                                  decoration: const InputDecoration(
+                                      border: InputBorder.none,
+                                      hintText: "password"),
+                                  style: const TextStyle(
+                                    fontFamily: 'Lucida Sans',
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                           Container(
                             alignment: Alignment.centerLeft,
-                            child: const Icon(Icons.remove_red_eye_outlined),
                             width: width * .1,
+                            child: InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    _obscureText = !_obscureText;
+                                  });
+                                },
+                                child:
+                                    const Icon(Icons.remove_red_eye_outlined)),
                           ),
                         ],
                       ),
@@ -228,7 +251,7 @@ class LogIn extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(
+                                Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => const SignUp()),
@@ -252,12 +275,12 @@ class LogIn extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(),
-          ),
-        ],
+            Expanded(
+              flex: 1,
+              child: Container(),
+            ),
+          ],
+        ),
       ),
     );
   }
