@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:topup/homepage.dart';
+import 'package:topup/bottomnavbar.dart';
+
 import 'package:topup/signuppage.dart';
 
 class LogIn extends StatefulWidget {
@@ -185,7 +186,7 @@ class _LogInState extends State<LogIn> {
                             context,
                             MaterialPageRoute(
                                 // ignore: prefer_const_constructors
-                                builder: (context) => HomePage()));
+                                builder: (context) => BottomNavBar()));
                       },
                       child: Container(
                         decoration: BoxDecoration(
