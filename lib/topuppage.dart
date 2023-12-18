@@ -9,6 +9,7 @@ class TopUpPage extends StatelessWidget {
       body: Row(
         children: [
           Container(),
+          Container(),
         ],
       ),
     );
