@@ -7,7 +7,9 @@ class TopUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
-        children: [],
+        children: [
+          Container(),
+        ],
       ),
     );
   }
