@@ -8,6 +8,7 @@ class TopUpPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Top Up"),
+        centerTitle: true,
       ),
       body: Row(
         children: [
