@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:topup/bottomnavbar.dart';
+import 'package:topup/gamepage.dart';
 
 import 'package:topup/homepage.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: GamePage(),
     );
   }
 }
