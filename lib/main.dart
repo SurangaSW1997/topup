@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GamePage(),
+      home: SplashScreen(),
     );
   }
 }
