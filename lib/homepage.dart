@@ -49,7 +49,12 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: [
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => TopUpPage()));
+                              },
                               child: Container(
                                 decoration: BoxDecoration(
                                     border: Border.all(
@@ -183,7 +188,7 @@ class _HomePageState extends State<HomePage> {
                                         width: 2, color: Colors.white),
                                     borderRadius: BorderRadius.circular(20)),
                                 width: width * .4,
-                                height: height * .15,
+                                height: height * .20,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -203,13 +208,13 @@ class _HomePageState extends State<HomePage> {
                                             fontWeight: FontWeight.bold,
                                             fontFamily: "Lucida Sans"),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
                             )
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),
