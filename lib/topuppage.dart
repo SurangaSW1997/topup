@@ -6,7 +6,9 @@ class TopUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(),
+      body: Row(
+        children: [],
+      ),
     );
   }
 }
