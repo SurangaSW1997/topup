@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:topup/aboutpage.dart';
+import 'package:topup/gamepage.dart';
+import 'package:topup/profilepage.dart';
+import 'package:topup/topuppage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -28,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                       fit: BoxFit.fitHeight,
                     ),
                   ),
-                )
+                ),
               ],
             ),
             Row(
@@ -44,42 +48,79 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Column(
                           children: [
-                            Container(
-                              child: Column(
-                                children: [
-                                  Container(
-                                    width: width * .3,
-                                    child: Icon(
-                                      Icons.store,
-                                      color: Colors.white,
-                                      size: width * .15,
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 2, color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20)),
+                                width: width * .4,
+                                height: height * .15,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: width * .3,
+                                      child: Icon(
+                                        Icons.store,
+                                        color: Colors.white,
+                                        size: width * .15,
+                                      ),
                                     ),
-                                  ),
-                                  Container(
-                                    child: Text(
-                                      "Top Up",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: "Lucida Sans"),
-                                    ),
-                                  )
-                                ],
+                                    Container(
+                                      child: const Text(
+                                        "Top Up",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: "Lucida Sans"),
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
-                              decoration: BoxDecoration(
-                                  border:
-                                      Border.all(width: 2, color: Colors.white),
-                                  borderRadius: BorderRadius.circular(20)),
-                              width: width * .4,
-                              height: height * .15,
                             ),
                             SizedBox(
                               height: height * .02,
                             ),
-                            Container(
-                              color: Colors.amber,
-                              width: width * .4,
-                              height: height * .15,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => AboutPage()));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 2, color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20)),
+                                width: width * .4,
+                                height: height * .15,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: width * .3,
+                                      child: Icon(
+                                        Icons.info,
+                                        color: Colors.white,
+                                        size: width * .15,
+                                      ),
+                                    ),
+                                    Container(
+                                      child: const Text(
+                                        "About",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: "Lucida Sans"),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -88,18 +129,84 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Column(
                           children: [
-                            Container(
-                              color: Colors.amber,
-                              width: width * .4,
-                              height: height * .15,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => GamePage()));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 2, color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20)),
+                                width: width * .4,
+                                height: height * .15,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: width * .3,
+                                      child: Icon(
+                                        Icons.games,
+                                        color: Colors.white,
+                                        size: width * .15,
+                                      ),
+                                    ),
+                                    Container(
+                                      child: const Text(
+                                        "Game",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: "Lucida Sans"),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
                             ),
                             SizedBox(
                               height: height * .02,
                             ),
-                            Container(
-                              color: Colors.amber,
-                              width: width * .4,
-                              height: height * .15,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ProfilePage()));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 2, color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20)),
+                                width: width * .4,
+                                height: height * .15,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: width * .3,
+                                      child: Icon(
+                                        Icons.person,
+                                        color: Colors.white,
+                                        size: width * .15,
+                                      ),
+                                    ),
+                                    Container(
+                                      child: const Text(
+                                        "Profile",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: "Lucida Sans"),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
                             )
                           ],
                         )

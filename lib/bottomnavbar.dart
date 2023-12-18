@@ -29,6 +29,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
+      extendBody: true,
       backgroundColor: const Color.fromRGBO(3, 15, 39, 1),
       body: pages[index],
       bottomNavigationBar: FloatingNavbar(
