@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "523056163474",
+    "project_id": "ff-topup-c661e",
+    "storage_bucket": "ff-topup-c661e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523056163474:android:b8fb238ae8b316da73944b",
+        "android_client_info": {
+          "package_name": "com.example.topup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvsfIGgoizE994Y_bkQf6ClRBj1Bl_Us0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
