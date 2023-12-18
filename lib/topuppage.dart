@@ -6,14 +6,11 @@ class TopUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Top Up"),
+      ),
       body: Row(
         children: [
-          Container(),
-          Container(),
-          Container(),
-          Container(),
-          Container(),
-          Container(),
           Container(),
         ],
       ),

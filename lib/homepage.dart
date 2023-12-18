@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:topup/aboutpage.dart';
 import 'package:topup/gamepage.dart';
 import 'package:topup/profilepage.dart';
@@ -89,42 +90,34 @@ class _HomePageState extends State<HomePage> {
                             SizedBox(
                               height: height * .02,
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => AboutPage()));
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                        width: 2, color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20)),
-                                width: width * .4,
-                                height: height * .15,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: width * .3,
-                                      child: Icon(
-                                        Icons.info,
-                                        color: Colors.white,
-                                        size: width * .15,
-                                      ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 2, color: Colors.white),
+                                  borderRadius: BorderRadius.circular(20)),
+                              width: width * .4,
+                              height: height * .15,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: width * .3,
+                                    child: Icon(
+                                      Icons.info,
+                                      color: Colors.white,
+                                      size: width * .15,
                                     ),
-                                    Container(
-                                      child: const Text(
-                                        "About",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: "Lucida Sans"),
-                                      ),
-                                    )
-                                  ],
-                                ),
+                                  ),
+                                  Container(
+                                    child: const Text(
+                                      "About",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: "Lucida Sans"),
+                                    ),
+                                  )
+                                ],
                               ),
                             )
                           ],
@@ -134,85 +127,69 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Column(
                           children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => GamePage()));
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                        width: 2, color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20)),
-                                width: width * .4,
-                                height: height * .15,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: width * .3,
-                                      child: Icon(
-                                        Icons.games,
-                                        color: Colors.white,
-                                        size: width * .15,
-                                      ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 2, color: Colors.white),
+                                  borderRadius: BorderRadius.circular(20)),
+                              width: width * .4,
+                              height: height * .15,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: width * .3,
+                                    child: Icon(
+                                      Icons.games,
+                                      color: Colors.white,
+                                      size: width * .15,
                                     ),
-                                    Container(
-                                      child: const Text(
-                                        "Game",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: "Lucida Sans"),
-                                      ),
-                                    )
-                                  ],
-                                ),
+                                  ),
+                                  Container(
+                                    child: const Text(
+                                      "Game",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: "Lucida Sans"),
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
                             SizedBox(
                               height: height * .02,
                             ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => ProfilePage()));
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                        width: 2, color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20)),
-                                width: width * .4,
-                                height: height * .20,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: width * .3,
-                                      child: Icon(
-                                        Icons.person,
-                                        color: Colors.white,
-                                        size: width * .15,
-                                      ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 2, color: Colors.white),
+                                  borderRadius: BorderRadius.circular(20)),
+                              width: width * .4,
+                              height: height * .15,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: width * .3,
+                                    child: Icon(
+                                      Icons.person,
+                                      color: Colors.white,
+                                      size: width * .15,
                                     ),
-                                    Container(
-                                      child: const Text(
-                                        "Profile",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: "Lucida Sans"),
-                                      ),
+                                  ),
+                                  Container(
+                                    child: const Text(
+                                      "Profile",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: "Lucida Sans"),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ],
