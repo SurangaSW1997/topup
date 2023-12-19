@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -6,6 +7,7 @@ class GamePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser!;
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -39,7 +41,11 @@ class GamePage extends StatelessWidget {
                       child: SizedBox(
                     width: width,
                     height: height * .32,
-                    child: Center(child: const Text("Hello Boss")),
+                    child: Center(
+                        child: Text(
+                      user.displayName!,
+                      style: TextStyle(color: Colors.white),
+                    )),
                   ))
                 ],
               ),

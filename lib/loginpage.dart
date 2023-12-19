@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:topup/bottomnavbar.dart';
+import 'package:topup/connect.dart';
 import 'package:topup/googlesignin.dart';
 
 import 'package:topup/signuppage.dart';
@@ -89,13 +90,9 @@ class _LogInState extends State<LogIn> {
                                 padding: EdgeInsets.only(right: width * .13),
                                 child: const TextField(
                                   keyboardType: TextInputType.emailAddress,
-                                  textAlignVertical: TextAlignVertical.center,
                                   decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    hintText: 'email',
-                                    // Set the hint text
-                                    // Optional border styling
-                                  ),
+                                      border: InputBorder.none,
+                                      hintText: "email"),
                                   style: TextStyle(
                                     fontFamily: 'Lucida Sans',
                                     fontSize: 16,
@@ -183,13 +180,7 @@ class _LogInState extends State<LogIn> {
                       height: height * .04,
                     ),
                     GestureDetector(
-                      onTap: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                // ignore: prefer_const_constructors
-                                builder: (context) => BottomNavBar()));
-                      },
+                      onTap: () {},
                       child: Container(
                         decoration: BoxDecoration(
                             color: const Color.fromRGBO(0, 87, 255, 1),
@@ -225,6 +216,12 @@ class _LogInState extends State<LogIn> {
                             context,
                             listen: false);
                         provider.googleLogin();
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Connect(),
+                          ),
+                        );
                       },
                       child: Container(
                         decoration: BoxDecoration(

@@ -1,8 +1,12 @@
+// ignore_for_file: curly_braces_in_flow_control_structures
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:topup/bottomnavbar.dart';
 import 'package:topup/errorpage.dart';
 import 'package:topup/homepage.dart';
 import 'package:topup/loginpage.dart';
+
 import 'package:topup/signuppage.dart';
 
 class Connect extends StatelessWidget {
@@ -13,16 +17,12 @@ class Connect extends StatelessWidget {
         body: StreamBuilder(
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting)
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              else if (snapshot.hasData) {
-                return const HomePage();
-              } else if (snapshot.hasError) {
-                return const ErrorLog();
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(child: CircularProgressIndicator());
+              } else if (snapshot.hasData) {
+                return const BottomNavBar();
               } else
-                return const SignUp();
+                return const LogIn();
             }),
       );
 }

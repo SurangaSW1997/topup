@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:topup/connect.dart';
 import 'package:topup/googlesignin.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -25,6 +26,12 @@ class ProfilePage extends StatelessWidget {
               final provider =
                   Provider.of<GoogleSignInProvider>(context, listen: false);
               provider.logout();
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Connect(),
+                ),
+              );
             },
             child: Container(
               color: Colors.white,

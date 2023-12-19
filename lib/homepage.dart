@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:topup/aboutpage.dart';
@@ -15,6 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser!;
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -31,6 +33,26 @@ class _HomePageState extends State<HomePage> {
                     child: Image.asset(
                       "assets/03.jpeg",
                       fit: BoxFit.fitHeight,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: Container(
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: NetworkImage(user.photoURL!),
+                        ),
+                        Text(
+                          user.email!,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          user.displayName!,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
                     ),
                   ),
                 ),
