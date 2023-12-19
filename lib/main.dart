@@ -1,10 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:topup/bottomnavbar.dart';
-import 'package:topup/gamepage.dart';
+import 'package:provider/provider.dart';
 
-import 'package:topup/homepage.dart';
+import 'package:topup/googlesignin.dart';
 
 import 'package:topup/splashscreen.dart';
 
@@ -20,9 +19,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+    return ChangeNotifierProvider(
+      create: (context) => GoogleSignInProvider(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+      ),
     );
   }
 }

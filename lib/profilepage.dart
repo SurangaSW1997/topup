@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:topup/googlesignin.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -14,6 +16,23 @@ class ProfilePage extends StatelessWidget {
         toolbarHeight: height * .08,
         title: const Text("Profile"),
         centerTitle: true,
+      ),
+      body: Container(
+        width: width,
+        child: Center(
+          child: GestureDetector(
+            onTap: () {
+              final provider =
+                  Provider.of<GoogleSignInProvider>(context, listen: false);
+              provider.logout();
+            },
+            child: Container(
+              color: Colors.white,
+              width: width * .4,
+              child: Text("Log Out"),
+            ),
+          ),
+        ),
       ),
     );
   }

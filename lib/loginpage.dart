@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:topup/bottomnavbar.dart';
+import 'package:topup/googlesignin.dart';
 
 import 'package:topup/signuppage.dart';
 
@@ -217,30 +219,38 @@ class _LogInState extends State<LogIn> {
                             color: Colors.white),
                       )),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                      width: width * .9,
-                      height: height * .06,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/google.png",
-                            width: 30,
-                          ),
-                          const SizedBox(
-                            width: 15,
-                          ),
-                          const Text(
-                            "Continue with Google",
-                            style: TextStyle(
-                                fontFamily: 'Lora',
-                                fontSize: 16,
-                                color: Colors.black),
-                          ),
-                        ],
+                    GestureDetector(
+                      onTap: () {
+                        final provider = Provider.of<GoogleSignInProvider>(
+                            context,
+                            listen: false);
+                        provider.googleLogin();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
+                        width: width * .9,
+                        height: height * .06,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/google.png",
+                              width: 30,
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            const Text(
+                              "Continue with Google",
+                              style: TextStyle(
+                                  fontFamily: 'Lora',
+                                  fontSize: 16,
+                                  color: Colors.black),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
