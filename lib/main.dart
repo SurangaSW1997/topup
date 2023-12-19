@@ -7,7 +7,7 @@ import 'package:topup/googlesignin.dart';
 
 import 'package:topup/splashscreen.dart';
 
-Future<void> main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);

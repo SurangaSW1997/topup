@@ -29,7 +29,7 @@ class ProfilePage extends StatelessWidget {
             child: Container(
               color: Colors.white,
               width: width * .4,
-              child: Text("Log Out"),
+              child: const Text("Log Out"),
             ),
           ),
         ),

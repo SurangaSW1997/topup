@@ -27,7 +27,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: const Color.fromRGBO(3, 15, 39, 1),
       body: pages[index],
