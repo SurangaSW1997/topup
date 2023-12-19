@@ -3,11 +3,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:topup/bottomnavbar.dart';
-import 'package:topup/errorpage.dart';
-import 'package:topup/homepage.dart';
-import 'package:topup/loginpage.dart';
 
-import 'package:topup/signuppage.dart';
+import 'package:topup/loginpage.dart';
 
 class Connect extends StatelessWidget {
   const Connect({super.key});
