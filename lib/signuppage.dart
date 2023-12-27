@@ -244,60 +244,6 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     SizedBox(
-                      height: height * .02,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(71, 71, 71, 1),
-                          borderRadius: BorderRadius.circular(20)),
-                      width: width * .9,
-                      height: height * .06,
-                      child: Row(
-                        children: [
-                          Container(
-                            alignment: Alignment.center,
-                            width: width * .15,
-                            child: const Icon(Icons.lock_outline_rounded),
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            width: width * .65,
-                            child: Opacity(
-                              opacity: .5,
-                              child: Padding(
-                                padding: EdgeInsets.only(right: width * .03),
-                                child: TextField(
-                                  obscureText: _obsecureText,
-                                  controller: _passwordTextController,
-                                  keyboardType: TextInputType.visiblePassword,
-                                  decoration: const InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: "confirm password"),
-                                  style: const TextStyle(
-                                    fontFamily: 'Lucida Sans',
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            width: width * .1,
-                            child: InkWell(
-                                onTap: () {
-                                  setState(() {
-                                    _obsecureText = !_obsecureText;
-                                  });
-                                },
-                                child:
-                                    const Icon(Icons.remove_red_eye_outlined)),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
                       height: height * .03,
                     ),
                     GestureDetector(
