@@ -253,6 +253,11 @@ class _SignUpState extends State<SignUp> {
                                         return null;
                                       }
                                     },
+                                    onChanged: (value) {
+                                      setState(() {
+                                        _password = value;
+                                      });
+                                    },
                                     style: const TextStyle(
                                       fontFamily: 'Lucida Sans',
                                       fontSize: 16,
