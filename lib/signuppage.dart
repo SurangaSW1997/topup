@@ -12,9 +12,14 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool _obsecureText = true;
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
+
+  String _email = "";
+  String _password = "";
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
