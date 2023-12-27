@@ -224,13 +224,20 @@ class _SignUpState extends State<SignUp> {
                               opacity: .5,
                               child: Padding(
                                 padding: EdgeInsets.only(right: width * .03),
-                                child: TextField(
+                                child: TextFormField(
                                   obscureText: _obsecureText,
                                   controller: _passwordTextController,
                                   keyboardType: TextInputType.visiblePassword,
                                   decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "password"),
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return "Enter your password";
+                                    } else {
+                                      return null;
+                                    }
+                                  },
                                   style: const TextStyle(
                                     fontFamily: 'Lucida Sans',
                                     fontSize: 16,
