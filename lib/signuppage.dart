@@ -27,7 +27,13 @@ class _SignUpState extends State<SignUp> {
     try {
       UserCredential userCredential = await _auth
           .createUserWithEmailAndPassword(email: _email, password: _password);
-      print("User registered: ${userCredential.user!.email}");
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const LogIn(),
+        ),
+      );
     } catch (e) {
       print("Error during registration: $e ");
     }
