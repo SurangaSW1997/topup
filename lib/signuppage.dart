@@ -131,12 +131,24 @@ class _SignUpState extends State<SignUp> {
                               opacity: .5,
                               child: Padding(
                                 padding: EdgeInsets.only(right: width * .13),
-                                child: TextField(
+                                child: TextFormField(
                                   controller: _emailTextController,
                                   keyboardType: TextInputType.emailAddress,
                                   decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       hintText: "email"),
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return "Please eenter your email";
+                                    } else {
+                                      return null;
+                                    }
+                                  },
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _email = value;
+                                    });
+                                  },
                                   style: const TextStyle(
                                     fontFamily: 'Lucida Sans',
                                     fontSize: 16,
