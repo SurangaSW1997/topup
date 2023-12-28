@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'package:topup/googlesignin.dart';
+import 'package:topup/homepage.dart';
 
 import 'package:topup/splashscreen.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       create: (context) => GoogleSignInProvider(),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
+        home: HomePage(),
       ),
     );
   }
