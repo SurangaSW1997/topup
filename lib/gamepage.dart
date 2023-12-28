@@ -43,7 +43,7 @@ class GamePage extends StatelessWidget {
                     height: height * .32,
                     child: Center(
                         child: Text(
-                      user.displayName!,
+                      "Welcome",
                       style: TextStyle(color: Colors.white),
                     )),
                   ))
