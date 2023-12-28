@@ -3,6 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:topup/bottomnavbar.dart';
 import 'package:topup/connect.dart';
 import 'package:topup/googlesignin.dart';
 import 'package:topup/homepage.dart';
@@ -32,7 +33,7 @@ class _LogInState extends State<LogIn> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const HomePage(),
+          builder: (context) => const BottomNavBar(),
         ),
       );
     } catch (e) {
