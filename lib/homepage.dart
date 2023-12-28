@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser!;
+    // final user = FirebaseAuth.instance.currentUser!;
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -38,23 +38,23 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Positioned(
                   child: Container(
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          radius: 40,
-                          backgroundImage: NetworkImage(user.photoURL!),
-                        ),
-                        Text(
-                          user.email!,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Text(
-                          user.displayName!,
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
+                      // child: Column(
+                      //   children: [
+                      //     CircleAvatar(
+                      //       radius: 40,
+                      //       backgroundImage: NetworkImage(user.photoURL!),
+                      //     ),
+                      //     Text(
+                      //       user.email!,
+                      //       style: const TextStyle(color: Colors.white),
+                      //     ),
+                      //     Text(
+                      //       user.displayName!,
+                      //       style: const TextStyle(color: Colors.white),
+                      //     ),
+                      //   ],
+                      // ),
+                      ),
                 ),
               ],
             ),
@@ -76,7 +76,8 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => TopUpPage()));
+                                        builder: (context) =>
+                                            const TopUpPage()));
                               },
                               child: Container(
                                 decoration: BoxDecoration(
@@ -117,7 +118,8 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => AboutPage()));
+                                        builder: (context) =>
+                                            const AboutPage()));
                               },
                               child: Container(
                                 decoration: BoxDecoration(
@@ -162,7 +164,8 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => GamePage()));
+                                        builder: (context) =>
+                                            const GamePage()));
                               },
                               child: Container(
                                 decoration: BoxDecoration(
@@ -203,7 +206,8 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ProfilePage()));
+                                        builder: (context) =>
+                                            const ProfilePage()));
                               },
                               child: Container(
                                 decoration: BoxDecoration(
