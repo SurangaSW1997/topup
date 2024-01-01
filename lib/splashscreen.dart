@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:topup/loginintropage.dart';
 
+//splash screen
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
