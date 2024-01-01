@@ -6,6 +6,7 @@ import 'package:topup/bottomnavbar.dart';
 
 import 'package:topup/loginpage.dart';
 
+//connect page
 class Connect extends StatelessWidget {
   const Connect({super.key});
 
