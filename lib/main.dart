@@ -8,6 +8,7 @@ import 'package:topup/homepage.dart';
 
 import 'package:topup/splashscreen.dart';
 
+//main
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
