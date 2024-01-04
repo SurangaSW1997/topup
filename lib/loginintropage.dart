@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:topup/loginpage.dart';
 import 'package:topup/signuppage.dart';
 
-//login intro
+//login introo
 class LoginIntro extends StatelessWidget {
   const LoginIntro({super.key});
 
