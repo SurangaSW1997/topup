@@ -6,7 +6,7 @@ import 'package:topup/gamepage.dart';
 import 'package:topup/profilepage.dart';
 import 'package:topup/topuppage.dart';
 
-//home page
+//home pagee
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
