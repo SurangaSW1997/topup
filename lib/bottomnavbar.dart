@@ -6,7 +6,7 @@ import 'package:topup/homepage.dart';
 import 'package:topup/profilepage.dart';
 import 'package:topup/topuppage.dart';
 
-//bottom nav bar page
+//bottom nav bar pagee
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
 
