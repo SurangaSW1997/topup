@@ -4,11 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'package:topup/googlesignin.dart';
-import 'package:topup/homepage.dart';
 
 import 'package:topup/splashscreen.dart';
 
-//main
+//mainn
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();

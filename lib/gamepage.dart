@@ -42,7 +42,7 @@ class GamePage extends StatelessWidget {
                       child: SizedBox(
                     width: width,
                     height: height * .32,
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       "Welcome",
                       style: TextStyle(color: Colors.white),

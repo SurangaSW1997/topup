@@ -8,7 +8,7 @@ class TopUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Top Up"),
+        title: const Text("Top Up"),
         centerTitle: true,
       ),
       body: Row(

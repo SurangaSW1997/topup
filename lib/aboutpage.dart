@@ -32,7 +32,7 @@ class AboutPage extends StatelessWidget {
                     )),
                 Positioned(
                   top: 0,
-                  child: Container(
+                  child: SizedBox(
                     width: width,
                     child: Row(
                       children: [
@@ -48,7 +48,7 @@ class AboutPage extends StatelessWidget {
                                       top: height * .02, bottom: height * .02),
                                   child: Column(
                                     children: [
-                                      Container(
+                                      SizedBox(
                                         width: width,
                                         child: Padding(
                                           padding:
@@ -64,7 +64,7 @@ class AboutPage extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      Container(
+                                      SizedBox(
                                         width: width,
                                         child: Padding(
                                           padding: EdgeInsets.only(
@@ -114,7 +114,7 @@ class AboutPage extends StatelessWidget {
                                       top: height * .02, bottom: height * .02),
                                   child: Column(
                                     children: [
-                                      Container(
+                                      SizedBox(
                                         width: width,
                                         child: Padding(
                                           padding:
@@ -130,7 +130,7 @@ class AboutPage extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      Container(
+                                      SizedBox(
                                         width: width,
                                         child: Padding(
                                           padding: EdgeInsets.only(
@@ -205,7 +205,7 @@ class AboutPage extends StatelessWidget {
                                       top: height * .02, bottom: height * .02),
                                   child: Column(
                                     children: [
-                                      Container(
+                                      SizedBox(
                                         width: width,
                                         child: Padding(
                                           padding:

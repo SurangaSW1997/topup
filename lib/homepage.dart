@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       width: width * .3,
                                       child: Icon(
                                         Icons.store,
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       width: width * .3,
                                       child: Icon(
                                         Icons.info,
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       width: width * .3,
                                       child: Icon(
                                         Icons.games,
@@ -221,7 +221,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       width: width * .3,
                                       child: Icon(
                                         Icons.person,

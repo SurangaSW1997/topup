@@ -19,7 +19,7 @@ class ProfilePage extends StatelessWidget {
         title: const Text("Profile"),
         centerTitle: true,
       ),
-      body: Container(
+      body: SizedBox(
         width: width,
         child: Center(
           child: GestureDetector(
@@ -30,7 +30,7 @@ class ProfilePage extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Connect(),
+                  builder: (context) => const Connect(),
                 ),
               );
             },
