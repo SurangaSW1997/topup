@@ -245,18 +245,6 @@ class _LogInState extends State<LogIn> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: width * .9,
-                        height: height * .1,
-                        child: const Center(
-                            child: Text(
-                          "Or",
-                          style: TextStyle(
-                              fontFamily: 'Lora',
-                              fontSize: 16,
-                              color: Colors.white),
-                        )),
-                      ),
                       Padding(
                         padding: EdgeInsets.only(top: height * .24),
                         child: SizedBox(
