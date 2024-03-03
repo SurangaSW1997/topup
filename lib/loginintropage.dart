@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:topup/loginpage.dart';
 import 'package:topup/signuppage.dart';
 
@@ -119,6 +121,9 @@ class LoginIntro extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: height * .01,
                 ),
               ],
             ),

@@ -111,7 +111,9 @@ class _LogInState extends State<LogIn> {
                                     keyboardType: TextInputType.emailAddress,
                                     decoration: const InputDecoration(
                                         border: InputBorder.none,
-                                        hintText: "email"),
+                                        hintText: "email",
+                                        hintStyle:
+                                            TextStyle(color: Colors.white)),
                                     validator: (value) {
                                       if (value == null || value.isEmpty) {
                                         return "Please eenter your email";
@@ -125,10 +127,9 @@ class _LogInState extends State<LogIn> {
                                       });
                                     },
                                     style: const TextStyle(
-                                      fontFamily: 'Lucida Sans',
-                                      fontSize: 16,
-                                      color: Colors.white,
-                                    ),
+                                        fontFamily: 'Lucida Sans',
+                                        fontSize: 16,
+                                        color: Colors.white),
                                   ),
                                 ),
                               ),
